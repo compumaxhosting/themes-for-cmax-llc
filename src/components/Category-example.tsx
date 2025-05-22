@@ -7,7 +7,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { slides } from "@/data/websites-data";
 
-const categories = ["all", ...new Set(slides.map((slide) => slide.category))];
+// Normalize categories into unique strings
+const categories: string[] = [
+  "all",
+  ...Array.from(
+    new Set(
+      slides.flatMap((slide) =>
+        Array.isArray(slide.category) ? slide.category : [slide.category]
+      )
+    )
+  ).filter((cat): cat is string => typeof cat === "string"),
+];
 
 const SliderComponent = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -18,16 +28,10 @@ const SliderComponent = () => {
 
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  const scrollPrev = useCallback(
-    () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
-  );
-  const scrollNext = useCallback(
-    () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
-  );
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -41,11 +45,14 @@ const SliderComponent = () => {
     onSelect();
   }, [emblaApi, onSelect]);
 
-  // Filter slides based on selected category
   const filteredSlides =
     selectedCategory === "all"
       ? slides
-      : slides.filter((slide) => slide.category === selectedCategory);
+      : slides.filter((slide) =>
+          Array.isArray(slide.category)
+            ? slide.category.includes(selectedCategory)
+            : slide.category === selectedCategory
+        );
 
   return (
     <div className="container mx-auto font-forum pt-12">
@@ -53,7 +60,7 @@ const SliderComponent = () => {
       <div className="mb-6 flex flex-wrap gap-4 justify-center">
         {categories.map((category) => (
           <button
-            key={category}
+            key={`cat-${category}`}
             onClick={() => setSelectedCategory(category)}
             className={`px-4 py-2 text-lg rounded shadow-md transition-colors ${
               selectedCategory === category
@@ -61,14 +68,16 @@ const SliderComponent = () => {
                 : "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300"
             }`}
           >
-            {category.charAt(0).toUpperCase() + category.slice(1)}
+            {category
+              .split(" ")
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(" ")}
           </button>
         ))}
       </div>
 
       {/* Carousel */}
       <div className="relative w-full mx-auto">
-        {/* Fixed height to prevent layout shift */}
         <div
           className="overflow-hidden"
           ref={emblaRef}
@@ -77,8 +86,8 @@ const SliderComponent = () => {
           <div className="flex animate-fade-zoom">
             {filteredSlides.map((slide) => (
               <div
-                className="flex-shrink-0 w-[33.333%] px-4 transition-transform duration-500"
                 key={slide.id}
+                className="flex-shrink-0 w-[33.333%] px-4 transition-transform duration-500"
               >
                 <div className="bg-white dark:bg-gray-800 shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-lg overflow-hidden border dark:border-gray-700">
                   <Image
