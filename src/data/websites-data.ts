@@ -51,7 +51,7 @@ export const slides = [
     id: 7,
     image: "/img-7.jpg",
     title: "Classic Cues",
-    category: "simple",
+    category: "Sports",
     path: "https://thefixwell.com/samples/c2",
     liveLink: "",
   },
@@ -117,7 +117,7 @@ export const slides = [
     id: 16,
     image: "/img-16.png",
     title: "classic Cues",
-    category: "simple",
+    category: "Sports",
     path: "https://thefixwell.com/samples/classic-red01/",
     liveLink: "",
   },
@@ -199,7 +199,7 @@ export const slides = [
     image: "/img-25.png",
     title: "Renaissance Sample 2",
     category: "events",
-    path: "https://thefixwell.com/samples/renaissanceevents-sample-2/",
+    path: "https://thefixwell.com/samples/renaissanceevents--sample-2/",
     liveLink: "",
   },
   {
@@ -308,7 +308,7 @@ export const slides = [
     image: "/img-40.png",
     title: "Mothreland Sample 2",
     category: "donations-and-non-profit",
-    path: "https://thefixwell.com/samples/motherland(sample2)_2-2-4-25/",
+    path: "https://thefixwell.com/samples/motherland-sample-1/",
     liveLink: "",
   },
 
@@ -317,7 +317,7 @@ export const slides = [
     image: "/img-41.png",
     title: "Mothreland Sample 3",
     category: "donations-and-non-profit",
-    path: "https://thefixwell.com/samples/motherland-sample(3)_1_2-4-25/",
+    path: "https://thefixwell.com/samples/motherland-sample(3)_1/",
     liveLink: "",
   },
 
@@ -823,7 +823,7 @@ export const slides = [
   {
     id: 108,
     image: "/carrus_demo2-3-6-25.png",
-    title: "guardian",
+    title: "Classic Cues",
     category: ["Live Sites USA", "Cars"],
     path: "https://mrtechinc.com/carrus_demo2-3-6-25/",
     liveLink: "",
@@ -831,7 +831,7 @@ export const slides = [
   {
     id: 109,
     image: "/clasiccue-29-07-25.png",
-    title: "guardian",
+    title: "Classic Cues",
     category: ["Live Sites USA", "Sports"],
     path: "https://mrtechinc.com/clasiccue-29-07-25/",
     liveLink: "https://classiccues.com/",
