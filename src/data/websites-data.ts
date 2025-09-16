@@ -1129,7 +1129,7 @@ export const slides = [
     image: "/ASLAMANDSONSCONSTRUCTION2.png",
     title: "Aslam And Sons Construction 2",
     category: ["construction/roofing"],
-    path: "https://mrtechinc.com/ASLAMANDSONSCONSTRUCTION2/",
+    path: "https://thefixwell.com/demo/ASLAMANDSONSCONSTRUCTION2/",
     liveLink: "",
   },
   {
@@ -1137,7 +1137,7 @@ export const slides = [
     image: "/Adollie_sample1_20-08-2025.png",
     title: "Adollie Sample 1 ",
     category: ["transportation"],
-    path: "https://mrtechinc.com/Adollie_sample1_20-08-2025/",
+    path: "https://thefixwell.com/demo/Adollie_sample1_20-08-2025/",
     liveLink: "https://www.adollie.com/",
   },
   {
@@ -1145,7 +1145,7 @@ export const slides = [
     image: "/adollie-20-08-25.png",
     title: "Adolli",
     category: ["transportation"],
-    path: "https://mrtechinc.com/adollie-20-08-25/",
+    path: "https://thefixwell.com/demo/adollie-20-08-25/",
     liveLink: "https://www.adollie.com/",
   },
   {
@@ -1153,7 +1153,7 @@ export const slides = [
     image: "/aslamandsons_sample1_26-08-2025.png",
     title: "Aslam And Sons Sample 1 ",
     category: "construction/roofing",
-    path: "https://mrtechinc.com/aslamandsons_sample1_26-08-2025/",
+    path: "https://thefixwell.com/demo/aslamandsons_sample1_26-08-2025/",
     liveLink: "",
   },
   {
@@ -1161,7 +1161,7 @@ export const slides = [
     image: "/aslamcontractorsecond.png",
     title: "Aslam Contractor Second",
     category: "construction/roofing",
-    path: "https://mrtechinc.com/aslamcontractorsecond/",
+    path: "https://thefixwell.com/demo/aslamcontractorsecond/",
     liveLink: "",
   },
   {
@@ -1169,7 +1169,7 @@ export const slides = [
     image: "/weds-garden.png",
     title: "Mumtaz Co",
     category: ["Live Sites USA"],
-    path: "https://mrtechinc.com/weds-garden/",
+    path: "https://thefixwell.com/demo/weds-garden/",
     liveLink: "",
   },
   {
@@ -1177,7 +1177,7 @@ export const slides = [
     image: "/bite-12-09-25.png",
     title: "Bit More",
     category: ["restaurant"],
-    path: "https://mrtechinc.com/bite-12-09-25/",
+    path: "https://thefixwell.com/demo/bite-12-09-25/",
     liveLink: "",
   },
   {
@@ -1185,7 +1185,7 @@ export const slides = [
     image: "/international-cue-03-09-2025.png",
     title: "International Cue ",
     category: ["Sports"],
-    path: "https://mrtechinc.com/international-cue-03-09-2025/",
+    path: "https://thefixwell.com/demo/international-cue-03-09-2025/",
     liveLink: "",
   },
 ];
